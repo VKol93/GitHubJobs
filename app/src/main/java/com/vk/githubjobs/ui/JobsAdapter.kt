@@ -29,7 +29,7 @@ class JobPostViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         itemView.company_view.setText(jobPost.company)
         itemView.location_view.setText(jobPost.location)
         itemView.applyButton.setOnClickListener {
-            Toast.makeText(itemView.context, "Application submitted", Toast.LENGTH_LONG)
+            Toast.makeText(itemView.context, "Application submitted", Toast.LENGTH_LONG).show()
         }
 
         /*itemView.JobPost_name_textView.text = JobPostData.name

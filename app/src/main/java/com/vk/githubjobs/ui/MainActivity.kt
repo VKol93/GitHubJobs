@@ -19,11 +19,9 @@ class MainActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE)
         val job1 = sharedPref.getString("description", null)
         val jobLocation1 = sharedPref.getString("location", null)
-        val savePref1 = sharedPref.getBoolean("savePref", false)
 
         descriptionEditText.setText(job1)
         locationEditText.setText(jobLocation1)
-        checkbox.isChecked = savePref1
 
         searchButton.setOnClickListener {
             val description = descriptionEditText.text.toString()
@@ -42,9 +40,9 @@ class MainActivity : AppCompatActivity() {
                 editor.apply {
                     putString("description", description)
                     putString("location", location)
-                    putBoolean("savePref", savePref)
                     apply()
                 }
+
 
         }
 
